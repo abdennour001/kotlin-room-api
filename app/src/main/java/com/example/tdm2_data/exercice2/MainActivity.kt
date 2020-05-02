@@ -60,6 +60,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getData(file:String): List<Intervention> {
+
+        var f = File(file)
+        if(!f.exists()) {
+            f.createNewFile()
+            var interventionsList: InterventionsList = InterventionsList(ArrayList())
+            var gson = Gson()
+            val jsonString:String = gson.toJson(interventionsList)
+            f.writeText(jsonString)
+        }
+
         val interventions = readInterventions(file)
 
         return interventions
@@ -72,7 +82,7 @@ class MainActivity : AppCompatActivity() {
         val inputString = bufferedReader.use { it.readText() }
         var interventionsList = gson.fromJson(inputString, InterventionsList::class.java)
 
-        Log.v("Read file", interventionsList.toString())
+        //Log.v("Read file", interventionsList.toString())
 
         return interventionsList.interventions
     }

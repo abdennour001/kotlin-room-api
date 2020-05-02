@@ -14,29 +14,30 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".exercice4.AddNoteActivity"
-            android:label="Add new Note"
-            >
+        <activity android:name=".ChoiceActivity">
 
-        </activity>
-        <activity
-            android:name=".exercice4.NoteActivity"
-            android:label="Note details"
-            />
-        <activity
-            android:name=".exercice4.Main3Activity"
-            android:label="Execrice 4 (Note manager)"
-            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".exercice4.AddNoteActivity"
+            android:label="Add new Note"></activity>
+        <activity
+            android:name=".exercice4.NoteActivity"
+            android:label="Note details" />
+        <activity
+            android:name=".exercice4.Main3Activity"
+            android:label="Execrice 4 (Note manager)"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity
             android:name=".exercice3.Main2Activity"
             android:label="Execrice 3 (Room API)"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".EditActivity" />
         <activity android:name=".AjouterActivity" />
         <activity android:name=".InterventionActivity" />

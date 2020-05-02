@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".exercice4.AddNoteActivity">
+
+    <LinearLayout
+        android:background="#26FFFF00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        >
+
+        <LinearLayout
+            android:id="@+id/note_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:adjustViewBounds="true"
+                android:src="@drawable/pin"/>
+
+            <EditText
+                android:id="@+id/note_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="#3A3A3A"
+                android:hint="Title"
+                android:textStyle="bold"
+                />
+
+            <DatePicker
+                android:id="@+id/note_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:datePickerMode = "spinner"
+                android:calendarViewShown="false"
+                android:textColor="#87000000"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                />
+
+            <EditText
+                android:id="@+id/note_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Your note..."
+                android:textColor="#636363"
+                android:textSize="16sp"
+                android:gravity="left"
+                />
+
+            <com.skydoves.colorpickerview.ColorPickerView
+            android:id="@+id/colorPickerView"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="20dp"
+                app:palette="@drawable/palette"
+                app:selector="@drawable/wheel" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="#fff"
+            android:layout_marginTop="20dp"
+            android:text="Ajouter" />
+
+    </LinearLayout>
+
+</ScrollView>

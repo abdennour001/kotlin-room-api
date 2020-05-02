@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.tdm2_data">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".exercice4.AddNoteActivity"
+            android:label="Add new Note"
+            >
+
+        </activity>
+        <activity
+            android:name=".exercice4.NoteActivity"
+            android:label="Note details"
+            />
+        <activity
+            android:name=".exercice4.Main3Activity"
+            android:label="Execrice 4 (Note manager)"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".exercice3.Main2Activity"
+            android:label="Execrice 3 (Room API)"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".EditActivity" />
+        <activity android:name=".AjouterActivity" />
+        <activity android:name=".InterventionActivity" />
+        <activity
+            android:name=".exercice2.MainActivity"
+            android:label="Execrice 2 (JSON DB)"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>
